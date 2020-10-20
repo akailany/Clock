@@ -12,6 +12,7 @@
 -->
 <project>
   <modelVersion>4.0.0</modelVersion>
+  <packaging>war</packaging>
   <version>1.0</version>
 
   <groupId>clock-293119</groupId>
