@@ -11,9 +11,6 @@
   limitations under the License.
 -->
 <project>
-  <modelVersion>4.0.0</modelVersion>
-  <packaging>clock</packaging>
-  <version>1.0</version>
 
   <groupId>clock-293119</groupId>
   <artifactId>Clock</artifactId>
