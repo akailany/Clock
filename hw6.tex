@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+\input{macros}
+
+\setlength{\parskip}{.4cm}
+\setlength{\baselineskip}{15pt}
+\setlength{\parindent}{0cm}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hrule
+\begin{center}
+{\LARGE \sc $\underline{\mbox{Problem Set 6}}$} \\
+{\Large \sc CS 373: Theory of Computation}\\
+\ \\
+\begin{tabular}{ll}
+Assigned: October 10, 2013 & Due on: October 17, 2013
+\end{tabular}
+\end{center}
+\hrule
+
+{\bf Instructions:} This homework has 3 problems that can be solved in
+groups of size at most 3. Please follow the homework guidelines given
+on the class website. Solutions not following these guidelines will
+not be graded.
+
+{\bf Recommended Reading:} Lectures 12, and 13.
+
+\begin{problem}{Design+Proof}
+Let $L$ be the language consisting all strings over $\{a,b\}$ that
+have twice as many $a$s as $b$s. For example, $aababa \in L$ and
+$\emptystr \in L$ but $a \not\in L$.
+\begin{enumerate}
+\item Design a context-free grammar for $L$.\points{5}
+\item Prove that your grammar is correct.\points{5}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Comprehension+Design}
+Let $G = (V,\Sigma,R,\tuple{\mbox{STMT}})$ be the following grammar
+\[
+\begin{array}{rcl}
+\tuple{\mbox{STMT}} & \longrightarrow & \tuple{\mbox{ASSIGN}}\: |\: 
+  \tuple{\mbox{IF-THEN}}\: |\: \tuple{\mbox{IF-THEN-ELSE}}\\
+\tuple{\mbox{IF-THEN}} & \longrightarrow & {\tt if\ condition\ then\ } 
+  \tuple{\mbox{STMT}}\\
+\tuple{\mbox{IF-THEN-ELSE}} & \longrightarrow & {\tt\ if\ condition\ then\ } 
+  \tuple{\mbox{STMT}}\ {\tt else\ } \tuple{\mbox{STMT}}\\
+\tuple{\mbox{assign}} & \longrightarrow & {\tt a := 1}
+\end{array}
+\]
+where $\Sigma = \{{\tt if}, {\tt then}, {\tt else}, {\tt condition},
+{\tt a := 1}\}$ and $V =
+\{\tuple{\mbox{STMT}},\tuple{\mbox{IF-THEN}},\tuple{\mbox{IF-THEN-ELSE}},
+\tuple{\mbox{ASSIGN}}\}$. $G$ is a natural looking grammar for a
+fragment of a programming language, but $G$ is ambiguous.
+\begin{enumerate}
+\item Show that $G$ is ambiguous.\points{5}
+\item Give a new unambiguous grammar for the same language. You need
+  not prove that your grammar is correct but explain your
+  construction. You may want to look at examples in Lecture
+  12.\points{5}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}{Design}
+Design a PDA to recognize the language $C = \{x\# y\: |\: x,y \in
+\{0,1\}^* \mbox{ and } x \neq y\}$; thus, $C \subseteq
+\{0,1,\#\}^*$. You need not prove that your construction is correct, but
+you should clearly explain the intuition behind your
+construction.\points{10}
+\end{problem}
+
+\end{document}
